@@ -12,12 +12,14 @@ export default async function Branch() {
     address: branchTable.address,
     phone: branchTable.branchPhone,
     seats: branchTable.seatNumber,
+    name: branchTable.branchName,
   }).from(branchTable).where(eq(branchTable.branchId, branchId ?? "")).execute();
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
       <section className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-xl font-semibold mb-4">Branch Information</h2>
+        <h1>Branch Name: {branchInfo.name}</h1>
         <h1>Branch Address: {branchInfo.address}</h1>
         <h1>Branch Phone: {branchInfo.phone}</h1>
         <h1>Seats: {branchInfo.seats}</h1>
