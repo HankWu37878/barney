@@ -11,7 +11,7 @@ export default function SignOutButton() {
     if (session) {
       await signOut({ callbackUrl: publicEnv.NEXT_PUBLIC_BASE_URL });
     }
-    router.push("/");
+    router.push(publicEnv.NEXT_PUBLIC_BASE_URL);
   };
   return (
     <button
