@@ -38,7 +38,7 @@ export function OrderTable({ orders }: OrderTableProps) {
             <th className="p-3 border-b">Customer</th>
             <th className="p-3 border-b">Phone</th>
             <th className="p-3 border-b">Type</th>
-            <th className="p-3 border-b">Content</th>
+            {/* <th className="p-3 border-b">Content</th> */}
           </tr>
         </thead>
         <tbody>
@@ -52,7 +52,7 @@ export function OrderTable({ orders }: OrderTableProps) {
               </td>
               <td className="p-3 border-b">{order.phone}</td>
               <td className="p-3 border-b">{order.type}</td>
-              <td className="p-3 border-b">{order.type}</td>
+              {/* <td className="p-3 border-b">{order.type}</td> */}
             </tr>
           ))}
         </tbody>
