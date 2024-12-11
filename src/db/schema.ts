@@ -83,7 +83,7 @@ export const customizedOrderTable = pgTable("customized_order", {
   customizedOrderId: uuid("customizedorderid").defaultRandom().primaryKey(),
   concentration: integer("concentration"),
   time: timestamp("time"),
-  type: varchar("type", { length: 10 }).notNull(),
+  type: varchar("ordertype", { length: 10 }).notNull(),
   memberId: uuid("memberid")
     .notNull()
     .references(() => memberAccountTable.memberId, {
